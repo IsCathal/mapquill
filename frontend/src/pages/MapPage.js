@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 
+console.log("Google Maps API Key:", process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+
+
 const containerStyle = {
   width: '100%',
   height: '500px'

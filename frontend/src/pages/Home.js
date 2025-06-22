@@ -11,13 +11,19 @@ function Home() {
   };
 
   return (
-    <div>
-      <h1>Select a Location</h1>
-      {locations.map(loc => (
-        <button key={loc} onClick={() => goToLocation(loc)}>
-          {loc.charAt(0).toUpperCase() + loc.slice(1)}
-        </button>
-      ))}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Select a Location</h1>
+      <div className="flex flex-col gap-4">
+        {locations.map((loc) => (
+          <button
+            key={loc}
+            onClick={() => goToLocation(loc)}
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow transition duration-200 ease-in-out text-lg font-medium"
+          >
+            {loc.charAt(0).toUpperCase() + loc.slice(1)}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
