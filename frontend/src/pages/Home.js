@@ -22,7 +22,15 @@ function Home() {
           >
             {loc.charAt(0).toUpperCase() + loc.slice(1)}
           </button>
+
+          
         ))}
+
+        <h2>BONUS TOURS</h2>
+            <button onClick={() => navigate("/ulysses/0")}>
+            📚 Ulysses Street-View Tour
+        </button>
+
       </div>
     </div>
   );
